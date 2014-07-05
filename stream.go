@@ -119,12 +119,11 @@ func insertLine(format string, a ...interface{}) {
 	line := fmt.Sprintf(format, a...)
 	lineQueue = append(lineQueue, line)
 
-	if len(readline.LineBuffer()) == 0 && !streamBlocked {
+	if len(readline.GetLineBuffer()) == 0 && !streamBlocked {
 		fmt.Printf("\033[0G\033[K")
 		for _, line := range lineQueue {
 			fmt.Println(line)
 		}
 		lineQueue = []string{}
-		readline.RefreshLine()
 	}
 }

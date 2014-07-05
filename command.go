@@ -121,7 +121,7 @@ func confirmExecute(function func() error, format string, a ...interface{}) {
 }
 
 func excuse(prompt string) string {
-	result := readline.Readline(&prompt)
+	result := readline.ReadLine(&prompt)
 	if result == nil {
 		print("\n")
 		return "n"

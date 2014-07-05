@@ -32,10 +32,9 @@ func loadAccount() *Account {
 }
 
 func invokeInteractiveShell(account *Account) {
-	readline.CatchSignals(0)
 
 	for {
-		currentLine := readline.Readline(prompt(account))
+		currentLine := readline.ReadLine(prompt(account))
 		if currentLine == nil || *currentLine == ":exit" {
 			return
 		}
