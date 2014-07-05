@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/k0kubun/go-readline"
+        "github.com/gobs/readline"
 	"log"
 	"regexp"
 	"strings"

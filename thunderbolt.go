@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/jessevdk/go-flags"
-	"github.com/k0kubun/go-readline"
+        "github.com/gobs/readline"
 	"log"
 )
 
